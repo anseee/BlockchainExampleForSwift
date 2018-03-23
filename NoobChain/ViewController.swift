@@ -12,14 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let genesisBlock = Block.init(data: "Hi i'm first block", previousHash: "0")
+        print("genesisBlock hash: \(genesisBlock.thisHash)")
+        
+        let secondBlock = Block.init(data: "Yo im the second block", previousHash: genesisBlock.thisHash)
+        print("secondBlock hash: \(secondBlock.thisHash)")
+        
+        let thirdBlock = Block.init(data: "Hi i'm third block", previousHash: secondBlock.thisHash)
+        print("thirdBlock hash: \(thirdBlock.thisHash)")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
