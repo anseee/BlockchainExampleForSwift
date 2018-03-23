@@ -13,6 +13,7 @@ struct Block {
     var previousHash = ""
     private var data = ""
     private var timeStamp: Date!
+    private var nonce = 0
     
     init(data: String, previousHash: String) {
         self.data = data
@@ -22,8 +23,23 @@ struct Block {
     }
     
     func calculateHash() -> String {
-        return "\(previousHash)\(timeStamp!.date()!)\(data)".sha256()
+        return "\(previousHash)\(timeStamp)\(nonce)\(data)".sha256()
     }
 
+    mutating func mineBlock(difficulty: Int) {
+        var target = ""
+        
+        for _ in 0..<difficulty {
+            target.append("0")
+        }
+        
+        let idx = thisHash.index(thisHash.startIndex, offsetBy: difficulty)
+        while thisHash[..<idx] != target {
+            nonce += 1
+            thisHash = calculateHash()
+        }
+        
+        print("block was mined: \(self.thisHash) rotate: \(nonce)")
+    }
 }
 

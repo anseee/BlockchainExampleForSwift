@@ -59,13 +59,13 @@
 		994E08EE2064981C004A1A4F /* NoobChain */ = {
 			isa = PBXGroup;
 			children = (
+				994E090120649839004A1A4F /* Block.swift */,
 				994E08EF2064981C004A1A4F /* AppDelegate.swift */,
 				994E08F12064981C004A1A4F /* ViewController.swift */,
 				994E08F32064981C004A1A4F /* Main.storyboard */,
 				994E08F62064981C004A1A4F /* Assets.xcassets */,
 				994E08F82064981C004A1A4F /* LaunchScreen.storyboard */,
 				994E08FB2064981C004A1A4F /* Info.plist */,
-				994E090120649839004A1A4F /* Block.swift */,
 				994E090320649967004A1A4F /* Extension.swift */,
 				994E090520649B1D004A1A4F /* NoobChain-Bridging-Header.h */,
 			);
