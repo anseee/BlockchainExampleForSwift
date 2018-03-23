@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var blockchain = [Block]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +23,31 @@ class ViewController: UIViewController {
         
         let thirdBlock = Block.init(data: "Hi i'm third block", previousHash: secondBlock.thisHash)
         print("thirdBlock hash: \(thirdBlock.thisHash)")
+        
+        blockchain.append(genesisBlock)
+        blockchain.append(secondBlock)
+        blockchain.append(thirdBlock)
+        
+        print(isChainValid())
+    }
+    
+    func isChainValid() -> Bool {
+        for index in 1..<blockchain.count {
+            let currentBlock: Block = blockchain[index]
+            let previousBlock: Block = blockchain[index-1]
+            
+            if currentBlock.thisHash != currentBlock.calculateHash() {
+                print("current hashes not equal")
+                return false
+            }
+            
+            if previousBlock.thisHash != currentBlock.previousHash {
+                print("previous hashes not equal")
+                return false
+            }
+        }
+        print("equals")
+        return true
     }
 }
 
