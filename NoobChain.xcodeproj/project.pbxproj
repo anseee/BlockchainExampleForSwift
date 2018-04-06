@@ -14,6 +14,13 @@
 		994E08FA2064981C004A1A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994E08F82064981C004A1A4F /* LaunchScreen.storyboard */; };
 		994E090220649839004A1A4F /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994E090120649839004A1A4F /* Block.swift */; };
 		994E090420649967004A1A4F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994E090320649967004A1A4F /* Extension.swift */; };
+		99A8EA17206CB1FA002D2C7A /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8EA16206CB1FA002D2C7A /* Wallet.swift */; };
+		99A8EA19206CBB34002D2C7A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8EA18206CBB34002D2C7A /* Transaction.swift */; };
+		99A8EA1B206CC2F1002D2C7A /* TransactionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8EA1A206CC2F1002D2C7A /* TransactionInput.swift */; };
+		99A8EA1D206CC324002D2C7A /* TransactionOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8EA1C206CC324002D2C7A /* TransactionOutput.swift */; };
+		99DDF4EF207737AB0047EF0A /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDF4ED207737AB0047EF0A /* RSA.m */; };
+		99DDF4F220774D690047EF0A /* WalletMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDF4F120774D690047EF0A /* WalletMakeViewController.swift */; };
+		99DDF4F520774FEA0047EF0A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DDF4F420774FEA0047EF0A /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,14 @@
 		994E090120649839004A1A4F /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		994E090320649967004A1A4F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		994E090520649B1D004A1A4F /* NoobChain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoobChain-Bridging-Header.h"; sourceTree = "<group>"; };
+		99A8EA16206CB1FA002D2C7A /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		99A8EA18206CBB34002D2C7A /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		99A8EA1A206CC2F1002D2C7A /* TransactionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInput.swift; sourceTree = "<group>"; };
+		99A8EA1C206CC324002D2C7A /* TransactionOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionOutput.swift; sourceTree = "<group>"; };
+		99DDF4ED207737AB0047EF0A /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSA.m; path = RSA/RSA.m; sourceTree = "<group>"; };
+		99DDF4EE207737AB0047EF0A /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSA.h; path = RSA/RSA.h; sourceTree = "<group>"; };
+		99DDF4F120774D690047EF0A /* WalletMakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletMakeViewController.swift; sourceTree = "<group>"; };
+		99DDF4F420774FEA0047EF0A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DDF4F520774FEA0047EF0A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +61,7 @@
 			children = (
 				994E08EE2064981C004A1A4F /* NoobChain */,
 				994E08ED2064981C004A1A4F /* Products */,
+				99DDF4F320774FEA0047EF0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,9 +76,11 @@
 		994E08EE2064981C004A1A4F /* NoobChain */ = {
 			isa = PBXGroup;
 			children = (
+				99DDF4F020774D440047EF0A /* ViewController */,
+				99A8EA11206CB1C3002D2C7A /* Cryptography */,
+				99A8EA1E206CC47D002D2C7A /* Transaction */,
 				994E090120649839004A1A4F /* Block.swift */,
 				994E08EF2064981C004A1A4F /* AppDelegate.swift */,
-				994E08F12064981C004A1A4F /* ViewController.swift */,
 				994E08F32064981C004A1A4F /* Main.storyboard */,
 				994E08F62064981C004A1A4F /* Assets.xcassets */,
 				994E08F82064981C004A1A4F /* LaunchScreen.storyboard */,
@@ -70,6 +89,43 @@
 				994E090520649B1D004A1A4F /* NoobChain-Bridging-Header.h */,
 			);
 			path = NoobChain;
+			sourceTree = "<group>";
+		};
+		99A8EA11206CB1C3002D2C7A /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				99DDF4EE207737AB0047EF0A /* RSA.h */,
+				99DDF4ED207737AB0047EF0A /* RSA.m */,
+			);
+			path = Cryptography;
+			sourceTree = "<group>";
+		};
+		99A8EA1E206CC47D002D2C7A /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				99A8EA16206CB1FA002D2C7A /* Wallet.swift */,
+				99A8EA18206CBB34002D2C7A /* Transaction.swift */,
+				99A8EA1A206CC2F1002D2C7A /* TransactionInput.swift */,
+				99A8EA1C206CC324002D2C7A /* TransactionOutput.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		99DDF4F020774D440047EF0A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				994E08F12064981C004A1A4F /* ViewController.swift */,
+				99DDF4F120774D690047EF0A /* WalletMakeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		99DDF4F320774FEA0047EF0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99DDF4F420774FEA0047EF0A /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +202,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				994E090220649839004A1A4F /* Block.swift in Sources */,
+				99A8EA17206CB1FA002D2C7A /* Wallet.swift in Sources */,
+				99A8EA19206CBB34002D2C7A /* Transaction.swift in Sources */,
+				99DDF4F220774D690047EF0A /* WalletMakeViewController.swift in Sources */,
 				994E08F22064981C004A1A4F /* ViewController.swift in Sources */,
 				994E08F02064981C004A1A4F /* AppDelegate.swift in Sources */,
 				994E090420649967004A1A4F /* Extension.swift in Sources */,
+				99DDF4EF207737AB0047EF0A /* RSA.m in Sources */,
+				99A8EA1D206CC324002D2C7A /* TransactionOutput.swift in Sources */,
+				99A8EA1B206CC2F1002D2C7A /* TransactionInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

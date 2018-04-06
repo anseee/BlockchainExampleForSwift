@@ -16,19 +16,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        blockchain.append(Block.init(data: "Hi i'm first block", previousHash: "0"))
-        print("Trying to mine block 1...")
-        blockchain[0].mineBlock(difficulty: difficulty)
+//        blockchain.append(Block.init(data: "Hi i'm first block", previousHash: "0"))
+//        print("Trying to mine block 1...")
+//        blockchain[0].mineBlock(difficulty: difficulty)
+//
+//        blockchain.append(Block.init(data: "Yo im the second block", previousHash: blockchain[0].thisHash))
+//        print("Trying to mine block 2...")
+//        blockchain[1].mineBlock(difficulty: difficulty)
+//
+//        blockchain.append(Block.init(data: "Hi i'm third block", previousHash: blockchain[1].thisHash))
+//        print("Trying to mine block 3...")
+//        blockchain[2].mineBlock(difficulty: difficulty)
         
-        blockchain.append(Block.init(data: "Yo im the second block", previousHash: blockchain[0].thisHash))
-        print("Trying to mine block 2...")
-        blockchain[1].mineBlock(difficulty: difficulty)
-        
-        blockchain.append(Block.init(data: "Hi i'm third block", previousHash: blockchain[1].thisHash))
-        print("Trying to mine block 3...")
-        blockchain[2].mineBlock(difficulty: difficulty)
-        
-        print(isChainValid())
+//        print(isChainValid())
     }
     
     func isChainValid() -> Bool {
