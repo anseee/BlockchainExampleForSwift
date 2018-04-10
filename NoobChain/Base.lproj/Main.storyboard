@@ -1,81 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Id1-PW-fml">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efP-Rq-wrs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--채굴-->
+        <scene sceneID="o6K-SD-9hs">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NoobChain" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="eBO-u7-Yg6" customClass="MiningViewController" customModule="NoobChain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mYw-y8-KH3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogecoin-300" translatesAutoresizingMaskIntoConstraints="NO" id="aYF-c9-Jrd">
-                                <rect key="frame" x="62" y="144" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Zhc-H4-Jby"/>
-                                    <constraint firstAttribute="width" constant="250" id="sxx-yY-Y7n"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqV-HZ-jH2">
-                                <rect key="frame" x="0.0" y="424" width="375" height="243"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uZz-kF-fyZ">
+                                <rect key="frame" x="0.0" y="133.5" width="375" height="400"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2R3-JT-D3U">
+                                        <rect key="frame" x="30" y="236" width="315" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="APT-lW-owl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogecoin-300" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-Gz-wlb">
+                                        <rect key="frame" x="62" y="-0.5" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="80T-er-GZk"/>
+                                            <constraint firstAttribute="width" constant="250" id="9xn-V3-LJi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k39-x7-n98">
+                                        <rect key="frame" x="0.0" y="249.5" width="375" height="150"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="채굴 시작">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startMiningAction:" destination="eBO-u7-Yg6" eventType="touchUpInside" id="42G-rt-eJk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="MLc-Gz-wlb" firstAttribute="centerX" secondItem="k39-x7-n98" secondAttribute="centerX" id="5D1-KW-5nm"/>
+                                    <constraint firstAttribute="bottom" secondItem="k39-x7-n98" secondAttribute="bottom" id="6hZ-z7-kz6"/>
+                                    <constraint firstItem="k39-x7-n98" firstAttribute="leading" secondItem="uZz-kF-fyZ" secondAttribute="leading" id="Cpt-1y-1XT"/>
+                                    <constraint firstItem="2R3-JT-D3U" firstAttribute="top" secondItem="MLc-Gz-wlb" secondAttribute="bottom" constant="-13.5" id="SLW-Vx-ofl"/>
+                                    <constraint firstAttribute="trailing" secondItem="k39-x7-n98" secondAttribute="trailing" id="Thm-8q-9CY"/>
+                                    <constraint firstItem="2R3-JT-D3U" firstAttribute="leading" secondItem="uZz-kF-fyZ" secondAttribute="leading" constant="30" id="UPz-ru-v2Z"/>
+                                    <constraint firstAttribute="height" constant="400" id="VXY-s0-ixu"/>
+                                    <constraint firstItem="k39-x7-n98" firstAttribute="top" secondItem="MLc-Gz-wlb" secondAttribute="bottom" id="biT-fe-meQ"/>
+                                    <constraint firstItem="MLc-Gz-wlb" firstAttribute="top" secondItem="uZz-kF-fyZ" secondAttribute="top" id="jI9-ki-nnE"/>
+                                    <constraint firstAttribute="trailing" secondItem="2R3-JT-D3U" secondAttribute="trailing" constant="30" id="xd9-tv-xQt"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Et-af-Zlg">
-                                <rect key="frame" x="0.0" y="545.5" width="375" height="121.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="지갑 만들기"/>
-                                <connections>
-                                    <segue destination="Qd3-7a-9ha" kind="show" id="wbn-2a-dcA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ6-U5-WT7">
-                                <rect key="frame" x="0.0" y="424" width="375" height="121.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="지갑 열기"/>
-                                <connections>
-                                    <segue destination="wqi-by-wDI" kind="show" id="x6e-Qe-GYB"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zqV-HZ-jH2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0uQ-QZ-UxW"/>
-                            <constraint firstAttribute="trailing" secondItem="UJ6-U5-WT7" secondAttribute="trailing" id="1Fd-li-V9g"/>
-                            <constraint firstItem="zqV-HZ-jH2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4kd-QT-2CV"/>
-                            <constraint firstItem="4Et-af-Zlg" firstAttribute="height" secondItem="zqV-HZ-jH2" secondAttribute="height" multiplier="0.5" id="ITg-AH-Lyh"/>
-                            <constraint firstItem="4Et-af-Zlg" firstAttribute="top" secondItem="UJ6-U5-WT7" secondAttribute="bottom" id="Mv3-E3-a3f"/>
-                            <constraint firstItem="zqV-HZ-jH2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PPm-nt-gju"/>
-                            <constraint firstItem="zqV-HZ-jH2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="T5U-4p-tFx"/>
-                            <constraint firstItem="4Et-af-Zlg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZZN-oq-fBh"/>
-                            <constraint firstAttribute="trailing" secondItem="4Et-af-Zlg" secondAttribute="trailing" id="cRM-zG-OOi"/>
-                            <constraint firstItem="UJ6-U5-WT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dHl-Va-8dg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zqV-HZ-jH2" secondAttribute="bottom" id="dgX-bA-2mW"/>
-                            <constraint firstItem="aYF-c9-Jrd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gBA-ol-HYj"/>
-                            <constraint firstItem="zqV-HZ-jH2" firstAttribute="top" secondItem="aYF-c9-Jrd" secondAttribute="bottom" constant="30" id="hux-wa-nYY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Et-af-Zlg" secondAttribute="bottom" id="iha-8X-ORl"/>
-                            <constraint firstItem="aYF-c9-Jrd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="kwp-ip-urz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zqV-HZ-jH2" secondAttribute="trailing" id="pO1-lV-DXw"/>
-                            <constraint firstItem="UJ6-U5-WT7" firstAttribute="height" secondItem="zqV-HZ-jH2" secondAttribute="height" multiplier="0.5" id="xEI-ax-xEa"/>
+                            <constraint firstItem="uZz-kF-fyZ" firstAttribute="centerY" secondItem="mYw-y8-KH3" secondAttribute="centerY" id="8zK-lg-iAA"/>
+                            <constraint firstItem="p4K-Tq-gjo" firstAttribute="trailing" secondItem="uZz-kF-fyZ" secondAttribute="trailing" id="Pfp-nw-THU"/>
+                            <constraint firstItem="uZz-kF-fyZ" firstAttribute="leading" secondItem="p4K-Tq-gjo" secondAttribute="leading" id="hI9-2W-g2W"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="p4K-Tq-gjo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EMc-1R-0SR"/>
+                    <tabBarItem key="tabBarItem" title="채굴" image="mining" id="tJU-J0-svj"/>
+                    <connections>
+                        <outlet property="imageView" destination="MLc-Gz-wlb" id="LXh-UY-xwT"/>
+                        <outlet property="progressBar" destination="2R3-JT-D3U" id="QcU-8j-J1P"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UiB-gG-r20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="465"/>
+            <point key="canvasLocation" x="1245.5999999999999" y="-107.49625187406298"/>
         </scene>
-        <!--Wallet Make View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qcc-EU-7pT">
+            <objects>
+                <tabBarController id="efP-Rq-wrs" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eht-Ph-cvO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eBO-u7-Yg6" kind="relationship" relationship="viewControllers" id="chk-tv-faB"/>
+                        <segue destination="Qd3-7a-9ha" kind="relationship" relationship="viewControllers" id="9hk-Mh-THC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDI-OI-01Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="225"/>
+        </scene>
+        <!--지갑 만들기-->
         <scene sceneID="2GZ-JN-q0E">
             <objects>
                 <viewController id="Qd3-7a-9ha" customClass="WalletMakeViewController" customModule="NoobChain" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,13 +106,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PrivateKey : 절대 알려주지 마세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1s-9V-KL6">
-                                <rect key="frame" x="20" y="114" width="355" height="21"/>
+                                <rect key="frame" x="20" y="70" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-00-wMy">
-                                <rect key="frame" x="20" y="150" width="325" height="150"/>
+                                <rect key="frame" x="20" y="106" width="325" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ejC-bX-p3s"/>
@@ -99,13 +121,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PublicKey : 계좌번호와 같은 역할" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNy-qn-c45">
-                                <rect key="frame" x="20" y="350" width="230" height="21"/>
+                                <rect key="frame" x="20" y="306" width="230" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NrE-8i-UDY">
-                                <rect key="frame" x="20" y="386" width="325" height="150"/>
+                                <rect key="frame" x="20" y="342" width="325" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="O7u-ap-Euy"/>
@@ -114,7 +136,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2D-hK-8Pq">
-                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="538" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="JKP-0o-G8i"/>
                                 </constraints>
@@ -125,14 +147,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVk-kL-AnY">
-                                <rect key="frame" x="312" y="109" width="43" height="30"/>
+                                <rect key="frame" x="312" y="65" width="43" height="30"/>
                                 <state key="normal" title="키 복사"/>
                                 <connections>
                                     <action selector="copyPrivateKeyAction:" destination="Qd3-7a-9ha" eventType="touchUpInside" id="2kj-V5-OYr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJV-pk-Mbu">
-                                <rect key="frame" x="312" y="346" width="43" height="30"/>
+                                <rect key="frame" x="312" y="302" width="43" height="30"/>
                                 <state key="normal" title="키 복사"/>
                                 <connections>
                                     <action selector="copyPublicKeyAction:" destination="Qd3-7a-9ha" eventType="touchUpInside" id="7yM-co-ZHQ"/>
@@ -166,6 +188,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CbE-nw-UaP"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="지갑 만들기" image="wallet" id="aW6-pi-uBe"/>
                     <connections>
                         <outlet property="privateKeyTextView" destination="bxZ-00-wMy" id="Zf2-UF-1dW"/>
                         <outlet property="publicKeyTextView" destination="NrE-8i-UDY" id="oae-Bv-eNP"/>
@@ -173,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceB-Rg-V7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="877"/>
+            <point key="canvasLocation" x="1246" y="595"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rD6-jt-kce">
@@ -188,28 +211,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxj-pR-RPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049" y="116"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="98I-dy-SLQ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Id1-PW-fml" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="go7-R1-3Xd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9A8-Bt-WSU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9NL-DC-3zQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="200.80000000000001" y="464.6176911544228"/>
+            <point key="canvasLocation" x="1953" y="558"/>
         </scene>
     </scenes>
     <resources>
         <image name="dogecoin-300" width="300" height="300"/>
+        <image name="mining" width="16" height="16"/>
+        <image name="wallet" width="16" height="16"/>
     </resources>
 </document>

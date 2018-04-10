@@ -26,7 +26,7 @@ struct Block {
         return "\(previousHash)\(timeStamp)\(nonce)\(data)".sha256()
     }
 
-    mutating func mineBlock(difficulty: Int) {
+    mutating func mineBlock(difficulty: Int, completed: (Bool) -> ()) {
         var target = ""
         
         for _ in 0..<difficulty {
@@ -40,6 +40,7 @@ struct Block {
         }
         
         print("block was mined: \(self.thisHash) rotate: \(nonce)")
+        completed(true)
     }
 }
 

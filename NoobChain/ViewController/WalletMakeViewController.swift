@@ -20,8 +20,15 @@ class WalletMakeViewController: UIViewController {
 
     @IBAction func createWalletAction(_ sender: UIButton) {
         rsa.generateKeyPair { [weak self] in
-            self?.publicKeyTextView.text = self?.rsa.getPublicKeyAsBase64()
-            self?.privateKeyTextView.text = self?.rsa.getPrivateKeyAsBase64()
+            if let privateKey = self?.rsa.getPrivateKeyAsBase64() {
+                self?.privateKeyTextView.text = privateKey
+                Wallet.instance.privateKey = privateKey
+            }
+            
+            if let publicKey = self?.rsa.getPublicKeyAsBase64() {
+                self?.publicKeyTextView.text = publicKey
+                Wallet.instance.publicKey = publicKey
+            }
         }
     }
     

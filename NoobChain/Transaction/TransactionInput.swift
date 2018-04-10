@@ -9,5 +9,6 @@
 import Foundation
 
 class TransactionInput: NSObject {
-    
+    public var transactionOutputId: String?
+    //public
 }

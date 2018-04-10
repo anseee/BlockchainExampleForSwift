@@ -14,6 +14,9 @@
 		994E08FA2064981C004A1A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994E08F82064981C004A1A4F /* LaunchScreen.storyboard */; };
 		994E090220649839004A1A4F /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994E090120649839004A1A4F /* Block.swift */; };
 		994E090420649967004A1A4F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994E090320649967004A1A4F /* Extension.swift */; };
+		995BF07F207C663400AC7F3F /* MiningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995BF07E207C663400AC7F3F /* MiningViewController.swift */; };
+		995BF081207C813B00AC7F3F /* dogeMining.gif in Resources */ = {isa = PBXBuildFile; fileRef = 995BF080207C813B00AC7F3F /* dogeMining.gif */; };
+		995BF083207C826C00AC7F3F /* progressbar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 995BF082207C826C00AC7F3F /* progressbar.gif */; };
 		99A8EA17206CB1FA002D2C7A /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8EA16206CB1FA002D2C7A /* Wallet.swift */; };
 		99A8EA19206CBB34002D2C7A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8EA18206CBB34002D2C7A /* Transaction.swift */; };
 		99A8EA1B206CC2F1002D2C7A /* TransactionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A8EA1A206CC2F1002D2C7A /* TransactionInput.swift */; };
@@ -34,6 +37,9 @@
 		994E090120649839004A1A4F /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 		994E090320649967004A1A4F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		994E090520649B1D004A1A4F /* NoobChain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoobChain-Bridging-Header.h"; sourceTree = "<group>"; };
+		995BF07E207C663400AC7F3F /* MiningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiningViewController.swift; sourceTree = "<group>"; };
+		995BF080207C813B00AC7F3F /* dogeMining.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dogeMining.gif; sourceTree = "<group>"; };
+		995BF082207C826C00AC7F3F /* progressbar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = progressbar.gif; sourceTree = "<group>"; };
 		99A8EA16206CB1FA002D2C7A /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		99A8EA18206CBB34002D2C7A /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		99A8EA1A206CC2F1002D2C7A /* TransactionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionInput.swift; sourceTree = "<group>"; };
@@ -76,8 +82,10 @@
 		994E08EE2064981C004A1A4F /* NoobChain */ = {
 			isa = PBXGroup;
 			children = (
-				99DDF4F020774D440047EF0A /* ViewController */,
+				995BF080207C813B00AC7F3F /* dogeMining.gif */,
+				995BF082207C826C00AC7F3F /* progressbar.gif */,
 				99A8EA11206CB1C3002D2C7A /* Cryptography */,
+				99DDF4F020774D440047EF0A /* ViewController */,
 				99A8EA1E206CC47D002D2C7A /* Transaction */,
 				994E090120649839004A1A4F /* Block.swift */,
 				994E08EF2064981C004A1A4F /* AppDelegate.swift */,
@@ -116,6 +124,7 @@
 			children = (
 				994E08F12064981C004A1A4F /* ViewController.swift */,
 				99DDF4F120774D690047EF0A /* WalletMakeViewController.swift */,
+				995BF07E207C663400AC7F3F /* MiningViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -188,9 +197,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995BF083207C826C00AC7F3F /* progressbar.gif in Resources */,
 				994E08FA2064981C004A1A4F /* LaunchScreen.storyboard in Resources */,
 				994E08F72064981C004A1A4F /* Assets.xcassets in Resources */,
 				994E08F52064981C004A1A4F /* Main.storyboard in Resources */,
+				995BF081207C813B00AC7F3F /* dogeMining.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +216,7 @@
 				99A8EA17206CB1FA002D2C7A /* Wallet.swift in Sources */,
 				99A8EA19206CBB34002D2C7A /* Transaction.swift in Sources */,
 				99DDF4F220774D690047EF0A /* WalletMakeViewController.swift in Sources */,
+				995BF07F207C663400AC7F3F /* MiningViewController.swift in Sources */,
 				994E08F22064981C004A1A4F /* ViewController.swift in Sources */,
 				994E08F02064981C004A1A4F /* AppDelegate.swift in Sources */,
 				994E090420649967004A1A4F /* Extension.swift in Sources */,

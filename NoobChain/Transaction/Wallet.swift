@@ -10,9 +10,12 @@ import Foundation
 
 class Wallet: NSObject {
     
-    var publicKey: Any?
+    static var instance = Wallet()
+    
+    var publicKey: String?
+    var privateKey: String?
     
     override init() {
-
+        
     }
 }
